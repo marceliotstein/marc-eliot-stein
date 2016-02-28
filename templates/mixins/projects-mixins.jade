@@ -1,0 +1,28 @@
+mixin project(project)
+	.project(data-ks-editable=editable(user, { list: 'Project', id: project.id }))
+		h2: a(href='/projects/project/' + project.slug)= project.title
+		if project.image.exists
+			img(src=project._.image.fit(300,300)).img.img-responsive
+		p.lead
+			if project.startDate && project.endDate
+				if project._.startDate.format('YYYY') === project._.endDate.format('YYYY') 
+					| #{project._.startDate.format('YYYY')} 
+				else
+					| #{project._.startDate.format('YYYY')} 
+					| to #{project._.endDate.format('YYYY')} 
+		p.lead.text-muted
+			if project.categories && project.categories.length
+				each cat, i in project.categories
+					a(href='/projects/' + cat.key)= cat.name
+					if i < project.categories.length - 1
+						| , 
+					else
+						|  
+		p.lead.text-muted
+			if project.location
+				| #{project.location}
+		//if project.image.exists
+		//	img(src=project._.image.fit(160,160)).img
+		p!= project.content.brief
+		if project.content.extended
+			p.read-more: a(href='/projects/project/' + project.slug) Read more...

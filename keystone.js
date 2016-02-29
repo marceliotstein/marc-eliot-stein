@@ -26,7 +26,7 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-        'mongo': 'mongodb://heroku_02qq5lcx:ti8lr36hu4g858fcir02rio1ll@ds019038.mlab.com:19038/heroku_02qq5lcx'
+        //'mongo': 'mongodb://heroku_02qq5lcx:ti8lr36hu4g858fcir02rio1ll@ds019038.mlab.com:19038/heroku_02qq5lcx'
 
 });
 

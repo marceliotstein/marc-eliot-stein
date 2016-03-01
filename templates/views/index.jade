@@ -1,21 +1,38 @@
 extends ../layouts/default
 
 block content
-	.container: .jumbotron
-		img(src='/images/logo.svg', width='160')
-		h1 Welcome
-		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
-		hr
-		if user && user.canAccessKeystone
-			p
-				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
-		else
-			p
-				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-				|  to use the Admin UI.
-
-
-		h2 Projects
-		.projects
-			each project in data.projectlist.results
-				+project(project)
+	.container
+		.front-main
+			img(class="front-main-image img-responsive" src='/images/mes-triptych1200.jpg')
+		p what i'm into ...
+		div.front-feature.col-xs-12
+			div.col-xs-6
+				.pull-right
+					<a class="hoverlink" href="/projects/advanced-webmobile-development">advanced web development</a><br />
+			div.col-xs-6 
+				.pull-left
+					<img class="img-responsive" width="150" src="/images/cdc300.jpg" />
+		div.front-feature.col-xs-12
+			div.col-xs-6
+				.pull-right
+					<img class="img-responsive" width="150" src="/images/inference300.jpg" />
+			div.col-xs-6
+				.pull-left <a href="projects/content-management-and-search">content management & search</a><br />
+		div.front-feature.col-xs-12
+			div.col-xs-6
+				.pull-right <a href="/projects/social-media-strategy">UX & social media strategy</a><br />
+			div.col-xs-6
+				.pull-left
+					<img class="img-responsive" width="150" src="/images/vcn300.jpg" />
+		div.front-feature.col-xs-12
+			div.col-xs-6
+				.pull-right
+					<img class="img-responsive" width="150" src="/images/pac300.jpg" />
+			div.col-xs-6
+				.pull-left <a href="/projects/pacifism-and-political-activism">pacifism & political activism</a><br />
+		div.front-feature.col-xs-12
+			div.col-xs-6
+				.pull-right <a href="/projects/arts-music-and-literature">music, literature & art</a><br />
+			div.col-xs-6
+				.pull-left
+					<img class="img-responsive" width="150" src="/images/pearljam300.jpg" />

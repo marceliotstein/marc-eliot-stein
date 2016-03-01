@@ -1,28 +1,28 @@
-mixin project(project)
+mixin project(project, showcats)
 	.project(data-ks-editable=editable(user, { list: 'Project', id: project.id }))
-		h2: a(href='/projects/project/' + project.slug)= project.title
+		h4: a(href='/projects/project/' + project.slug)= project.title
+		p!= project.content.brief
+		if project.content.extended
+			p.read-more: a(href='/projects/project/' + project.slug) Read more...
 		if project.image.exists
 			img(src=project._.image.fit(300,300)).img.img-responsive
-		p.lead
+		p.text-muted
 			if project.startDate && project.endDate
 				if project._.startDate.format('YYYY') === project._.endDate.format('YYYY') 
 					| #{project._.startDate.format('YYYY')} 
 				else
 					| #{project._.startDate.format('YYYY')} 
 					| to #{project._.endDate.format('YYYY')} 
-		p.lead.text-muted
-			if project.categories && project.categories.length
-				each cat, i in project.categories
-					a(href='/projects/' + cat.key)= cat.name
-					if i < project.categories.length - 1
-						| , 
-					else
-						|  
-		p.lead.text-muted
+		p.text-muted
 			if project.location
 				| #{project.location}
-		//if project.image.exists
-		//	img(src=project._.image.fit(160,160)).img
-		p!= project.content.brief
-		if project.content.extended
-			p.read-more: a(href='/projects/project/' + project.slug) Read more...
+		if showcats
+			p
+				if project.categories && project.categories.length
+					each cat, i in project.categories
+						a(href='/projects/' + cat.key)= cat.name
+						if i < project.categories.length - 1
+							| , 
+						else
+							|  
+		hr

@@ -2,7 +2,8 @@ extends ../layouts/default
 
 block intro
 	.container
-		h1= data.category ? data.category.name : 'Projects'
+		h3 Portfolio: 
+			i #{data.category ? data.category.name : 'Projects'}
 
 block content
 	.container: .row
@@ -19,25 +20,10 @@ block content
 							|  of 
 							strong #{data.projectlist.total}
 							|  projects.
-					else
-						h4.text-weight-normal Showing #{utils.plural(data.projectlist.results.length, '* project')}.
 					.projects
 						each project in data.projectlist.results
-							+project(project)
+							+project(project, false)
 					
-					if data.projectlist.totalPages > 1
-						ul.pagination
-							if data.projectlist.previous
-								li: a(href='?page=' + data.projectlist.previous): span.glyphicon.glyphicon-chevron-left
-							else
-								li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
-							each p, i in data.projectlist.pages
-								li(class=data.projectlist.currentPage == p ? 'active' : null)
-									a(href='?page=' + (p == '...' ? (i ? data.projectlist.totalPages : 1) : p ))= p
-							if data.projectlist.next
-								li: a(href='?page=' + data.projectlist.next): span.glyphicon.glyphicon-chevron-right
-							else
-								li.disabled: a(href='?page=' + data.projectlist.totalPages): span.entypo.glyphicon.glyphicon-chevron-right
 				else
 					if data.category
 						h3.text-muted There are no projects in the category #{data.category.name}.

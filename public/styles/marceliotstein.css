@@ -1,10 +1,43 @@
 body, p {
   font-family: 'Cabin', sans-serif;
+  font-size: 12px;
+}
+
+.front-intro {
+  padding-bottom: 14px;
 }
 
 .front-feature {
+  padding-bottom: 14px;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-bottom: 1px dashed #2f2f2f;
+}
+
+.front-feature-pic-left {
+  margin: 0px;
+  padding: 0px;
+}
+
+.front-feature-pic-right {
+  margin: 0px;
+  padding: 0px;
+}
+
+.front-feature-words-left {
+  margin: 0px;
+  padding: 0px;
+  padding-right: 5px;
+}
+
+.front-feature-words-right {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 5px;
 }
 
 hr {
@@ -61,6 +94,8 @@ a.hoverlink:active, hover {
 .navbar-brand, 
 .navbar-default .navbar-brand {
   font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
   background-color: #ffffff;
   border-width: 0px;
   color: #000000;

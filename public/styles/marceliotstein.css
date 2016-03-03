@@ -26,18 +26,15 @@ body, p {
 }
 
 .front-feature-words {
-  border-top: 2px solid #000000;
+  border-top: 2px solid #7f7f7f;
   background-color: #fff7f0;
   padding: 5px;
   font-size: 12px; 
 }
 
-.front-feature-pic-left {
-  margin: 0px;
-  padding: 0px;
-}
-
+.front-feature-pic-left,
 .front-feature-pic-right {
+  border: 2px solid #000000;
   margin: 0px;
   padding: 0px;
 }

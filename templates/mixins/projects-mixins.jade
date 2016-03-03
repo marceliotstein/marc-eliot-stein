@@ -5,7 +5,7 @@ mixin project(project, showcats)
 		if project.content.extended
 			p.read-more: a(href='/projects/project/' + project.slug) Read more...
 		if project.image.exists
-			img(src=project._.image.fit(300,300)).img.img-responsive
+			img(src=project._.image.src()).img.img-responsive
 		p.text-muted
 			if project.startDate && project.endDate
 				if project._.startDate.format('YYYY') === project._.endDate.format('YYYY') 
@@ -25,4 +25,3 @@ mixin project(project, showcats)
 							| , 
 						else
 							|  
-		hr

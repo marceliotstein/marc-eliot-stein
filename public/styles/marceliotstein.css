@@ -1,17 +1,20 @@
 body, p {
   font-family: 'Tenali Ramakrishna', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .front-me {
+  line-height: .9em;
   margin-left: auto;
   margin-right: auto;
   width: 300px;
   display: block;
 }
 
-.front-intro {
-  padding-bottom: 14px;
+.front-textbox {
+  line-height: .9em;
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 
 .front-feature {
@@ -26,10 +29,10 @@ body, p {
 }
 
 .front-feature-words {
+  line-height: .9em;
   border-top: 2px solid #7f7f7f;
-  background-color: #fff7f0;
-  padding: 5px;
-  font-size: 14px; 
+  background-color: #ddd;
+  padding: 3px;
 }
 
 .front-feature-pic-left,
@@ -93,8 +96,15 @@ a.hoverlink:active, hover {
 .navbar-brand, 
 .navbar-default .navbar-brand {
   font-family: 'Stint Ultra Expanded', sans-serif;
-  font-size: 1.2em;
   background-color: #ffffff;
   border-width: 0px;
   color: #000000;
+}
+
+.navbar-header {
+  font-size: 1.1em;
+}
+
+.navbar-default {
+  font-size: .9em;
 }

@@ -24,7 +24,7 @@ exports.initLocals = function(req, res, next) {
 	var locals = res.locals;
 	
 	locals.navLinks = [
-		{ label: 'About Me',		key: 'about',		href: '/about' },
+		{ label: 'About Me',		key: 'about',		href: '/blog/post/about-me' },
 		{ label: 'Twitter',		key: 'twitter',		href: 'http://twitter.com/asheresque' },
 		{ label: 'LinkedIn',		key: 'linkedin',	href: 'https://www.linkedin.com/in/marceliotstein' },
 		{ label: 'Github',		key: 'github',		href: 'http://github.com/marceliotstein' },

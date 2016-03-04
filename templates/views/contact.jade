@@ -2,7 +2,7 @@ extends ../layouts/default
 
 block intro
 	.container
-		h1 Contact Us
+		h1 Contact Me
 		
 block content
 	.container
@@ -22,13 +22,13 @@ block content
 						label Phone
 						input(type='text', name='phone', value=formData.phone, placeholder='(optional)').form-control
 					.form-group(class=validationErrors.enquiryType ? 'has-error' : null)
-						label What are you contacting us about?
+						label What are you contacting me about?
 						select(name='enquiryType').form-control
 							option(value='') (select one)
 							each type in enquiryTypes
 								option(value=type.value, selected=formData.enquiryType == type.value)= type.label
 					.form-group(class=validationErrors.message ? 'has-error' : null)
 						label Message
-						textarea(name='message', placeholder='Leave us a message...' rows=4).form-control= formData.message
+						textarea(name='message', placeholder='Leave me a message...' rows=4).form-control= formData.message
 					.form-actions
 						button(type='submit').btn.btn-primary Send

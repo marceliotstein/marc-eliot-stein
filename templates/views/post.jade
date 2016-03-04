@@ -24,6 +24,6 @@ block content
 							| by #{data.post.author.name.first}
 				.post
 					if data.post.image.exists
-						.post-img.image-wrap: img(src=data.post._.image.src()).img-responsive
+						.post-image.image-wrap: img(src=data.post._.image.src()).img-responsive
 					!= data.post.content.full
 			p: a(href='/blog') &larr; 

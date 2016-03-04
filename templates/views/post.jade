@@ -3,13 +3,13 @@ extends ../layouts/default
 block content
 	.container: .row: .col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
 		article
-			p: a(href='/blog') &larr; back to the blog
+			p: a(href='/blog') &larr; 
 			if !data.post
 				h2 Invalid Post.
 			else
 				header
 					h1= data.post.title
-					h5 Posted 
+					p Posted 
 						if data.post.publishedDate
 							| on #{data.post._.publishedDate.format('MMMM Do, YYYY')} 
 						if data.post.categories && data.post.categories.length
@@ -24,5 +24,6 @@ block content
 							| by #{data.post.author.name.first}
 				.post
 					if data.post.image.exists
-						.image-wrap: img(src=data.post._.image.src()).img-responsive
+						.post-img.image-wrap: img(src=data.post._.image.src()).img-responsive
 					!= data.post.content.full
+			p: a(href='/blog') &larr; 

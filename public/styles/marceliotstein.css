@@ -3,6 +3,10 @@ body, p {
   font-size: 24px;
 }
 
+.post-image {
+  padding-bottom: 14px;
+}
+
 h4 {
   font-size: 36px;
 }

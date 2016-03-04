@@ -1,11 +1,11 @@
 mixin project(project, showcats)
 	.project(data-ks-editable=editable(user, { list: 'Project', id: project.id }))
-		h4: a(href='/projects/project/' + project.slug)= project.title
+		h3: a(href='/projects/project/' + project.slug)= project.title
+		if project.image.exists
+			img(src=project._.image.src()).img.img-responsive
 		p!= project.content.brief
 		if project.content.extended
 			p.read-more: a(href='/projects/project/' + project.slug) Read more...
-		if project.image.exists
-			img(src=project._.image.src()).img.img-responsive
 		p.text-muted
 			if project.startDate && project.endDate
 				if project._.startDate.format('YYYY') === project._.endDate.format('YYYY') 

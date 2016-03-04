@@ -32,10 +32,17 @@ h4 {
 }
 
 .front-feature-words {
+  padding: 0px;
+}
+
+.front-feature-words-inner {
   line-height: 1em;
   border-top: 2px solid #7f7f7f;
   background-color: #ddd;
-  padding: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .front-feature-words a {
@@ -44,9 +51,36 @@ h4 {
 
 .front-feature-pic-left,
 .front-feature-pic-right {
+  border: 0px;
+  margin: 0px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+.front-feature-pic-left {
+  padding-left: 0px;
+  padding-right: 10px;
+}
+
+.front-feature-pic-right {
+  padding-left: 10px;
+  padding-right: 0px;
+}
+
+.front-feature-pic-inner {
   border: 2px solid #000000;
   margin: 0px;
   padding: 0px;
+}
+
+.front-feature-pic-inner-left {
+  padding-left: 0px;
+  padding-right: 10px;
+}
+
+.front-feature-pic-inner-right {
+  padding-left: 10px;
+  padding-right: 0px;
 }
 
 hr {

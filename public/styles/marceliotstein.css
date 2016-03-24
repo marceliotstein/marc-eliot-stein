@@ -75,6 +75,16 @@ h4 {
   padding-right: 0px;
 }
 
+.front-feature-pic-inner-small {
+  border: 0px;
+  padding: 0px;
+}
+
+.front-feature-pic-img-small {
+  border: 2px solid #000000;
+  margin: 0 auto;
+}
+
 .front-feature-pic-inner {
   border: 2px solid #000000;
   margin: 0px;
